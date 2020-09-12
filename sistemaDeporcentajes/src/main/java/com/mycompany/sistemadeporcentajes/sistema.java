@@ -6,6 +6,7 @@
 package com.mycompany.sistemadeporcentajes;
 
 import com.mycompany.Dominio.clsDominio;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -409,6 +410,12 @@ public class sistema extends javax.swing.JFrame {
         Double res=metodo.PromedioGeneral(Resultado1, Resultado2, Resultado3);
         
         txtNotaGeneral.setText(res.toString());
+         if (res<=6){
+        JOptionPane.showMessageDialog(null,"Reprobo la Materia");
+        }else {
+        JOptionPane.showMessageDialog(null,"Aprobo la Materia");
+       
+        }
         
         
     }//GEN-LAST:event_btnResultadoGeneralActionPerformed
